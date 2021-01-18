@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const numbers = window.prompt();
+    const string1 = numbers.toString();
+    const result = [string1[0]];
+
+    for (let x=1; x<string1.length; x++) {
+        if ((string1[x-1]%2===0)&&(string1[x]%2===0)) {
+            result.push('-',string1[x]);
+
+        }else {
+            result.push(string1[x]);
+        }
+    }
+   console.log(result.join(''));
+</script>
+</body>
+</html>
