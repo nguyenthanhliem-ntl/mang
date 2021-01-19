@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums = [15,28,13,5,48845,5,6];
+    let first = 0;
+    let last = nums.length - 1;
+
+    while (first < last) {
+        let b = nums[first];
+        nums[first] = nums[last];
+        nums[last] = b;
+        first++;
+        last--;
+
+    }
+    document.write(nums.join(' '));
+</script>
+</body>
+</html>

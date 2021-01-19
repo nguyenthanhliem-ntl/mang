@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums = [] ;
+    for (i=1;i<=10;i++) {
+    nums = prompt(" nhap");
+    }
+    let first = 0;
+    let last = nums.length - 1;
+    while (first < last) {
+        let b = nums[first];
+        nums[first] = nums[last];
+        nums[last] = b;
+        first++;
+        last--;
+    }
+    document.write(nums);
+</script>
+</body>
+</html>

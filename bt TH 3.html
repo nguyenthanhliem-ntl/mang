@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums = [9,15,7,6,89,45,0,33,14,8];
+    let max = nums[0];
+    let index = 0;
+    let a = (accumulator, currentValue) => accumulator + currentValue;
+
+
+    for (i=0;i<nums.length;i++) {
+        if (nums[i]>max) {
+            max = nums[i];
+            index = i;
+        }
+    }
+    document.write(max+" ");
+    document.write(" giá trị tb của mảng là :" + nums.reduce(a)/(i+1))
+</script>
+</body>
+</html>
