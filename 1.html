@@ -7,18 +7,25 @@
 <body>
 <script>
     const numbers = window.prompt();
-    const string1 = numbers.toString();
-    const result = [string1[0]];
+    c$dictionary = array(
+        "hello"=>"xin chào", "how"=>"thế nào", "book"=>"quyển vở", "computer"=>"máy tính");
 
-    for (let x=1; x<string1.length; x++) {
-        if ((string1[x-1]%2===0)&&(string1[x]%2===0)) {
-            result.push('-',string1[x]);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $searchword = $_POST["search"];
+        $flag = 0;
+        foreach($dictionary as $word => $description) {
+            if($word == $searchword){
+                echo "Từ: " . $word . ". <br/>Nghĩa của từ: " . $description;
+                echo "<br/>";
+                $flag = 1;
+            }
+        }
 
-        }else {
-            result.push(string1[x]);
+        if($flag == 0){
+            echo "Không tìm thấy từ cần tra.";
         }
     }
-   console.log(result.join(''));
+</script>
 </script>
 </body>
 </html>
